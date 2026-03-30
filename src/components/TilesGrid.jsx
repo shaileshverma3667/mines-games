@@ -1,7 +1,7 @@
 const TilesGrid = ({ tiles, gameStatus, handleTileClick }) => {
   return (
     <div className="mx-auto w-fit rounded-[18px] bg-[#2e3436]/95 p-4 shadow-[0_20px_50px_rgba(0,0,0,0.32)] ring-1 ring-white/5 md:p-5">
-      <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-2.5 md:grid-cols-5 md:gap-3">
+      <div className="grid grid-cols-4 gap-2 sm:grid-cols-4 sm:gap-2.5 md:grid-cols-5 md:gap-3">
         {tiles.map((tile, index) => {
           const isHidden = tile === 'hidden';
           const isDisabled = gameStatus !== 'playing' || !isHidden;

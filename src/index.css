@@ -1,1 +1,55 @@
 @import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background: #1f2322;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #1f2322;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.mines-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 24px;
+  width: 12px;
+  border-radius: 999px;
+  background: #f8f8f8;
+  border: 0;
+  box-shadow: 0 0 0 4px rgba(39, 199, 111, 0.18);
+}
+
+.mines-slider::-moz-range-thumb {
+  height: 24px;
+  width: 12px;
+  border-radius: 999px;
+  background: #f8f8f8;
+  border: 0;
+  box-shadow: 0 0 0 4px rgba(39, 199, 111, 0.18);
+}
+
+.mines-slider::-webkit-slider-runnable-track {
+  height: 10px;
+  border-radius: 999px;
+  background: transparent;
+}
+
+.mines-slider::-moz-range-track {
+  height: 10px;
+  border-radius: 999px;
+  background: transparent;
+}

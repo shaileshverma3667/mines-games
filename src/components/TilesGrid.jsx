@@ -1,7 +1,7 @@
 const TilesGrid = ({ tiles, gameStatus, handleTileClick }) => {
   return (
     <div className="mx-auto w-fit rounded-[18px] bg-[#2e3436]/95 p-4 shadow-[0_20px_50px_rgba(0,0,0,0.32)] ring-1 ring-white/5 md:p-5">
-      <div className="grid grid-cols-5 gap-2.5 md:gap-3">
+      <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-2.5 md:grid-cols-5 md:gap-3">
         {tiles.map((tile, index) => {
           const isHidden = tile === 'hidden';
           const isDisabled = gameStatus !== 'playing' || !isHidden;
@@ -12,7 +12,7 @@ const TilesGrid = ({ tiles, gameStatus, handleTileClick }) => {
               type="button"
               onClick={() => handleTileClick(index)}
               disabled={isDisabled}
-              className={`flex h-[84px] w-[84px] items-center justify-center rounded-[10px] border text-3xl font-bold transition md:h-[88px] md:w-[88px] ${
+              className={`flex h-[60px] w-[60px] items-center justify-center rounded-[10px] border text-3xl font-bold transition sm:h-[72px] sm:w-[72px] md:h-[84px] md:w-[84px] lg:h-[88px] lg:w-[88px] ${
                 isHidden
                   ? 'border-white/[0.03] bg-[#586062] hover:-translate-y-0.5 hover:bg-[#646d70] active:translate-y-0'
                   : tile === 'safe'
